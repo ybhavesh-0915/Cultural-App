@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+$bgcolor: #202020;
+$primary: #303030;
+$secondary: #404040;
+$tertiary: #505050;
+$text: #fff;
+
+@mixin flexprop($gap, $justify, $align, $dir) {
+    display: flex;
+
+    @if($gap !=null) {
+        gap: $gap;
+    }
+
+    @if($justify !=null) {
+        justify-content: $justify;
+    }
+
+    @if($align !=null) {
+        align-items: $align;
+    }
+
+    @if($dir !=null) {
+        flex-direction: $dir;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+.icons {
+    color: $text;
+}
+
+a{
+    color: $text;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    @include flexprop(null, null, null, null);
+    background-color: $bgcolor;
+    color: $text;
+
+    &::-webkit-scrollbar {
+        display: none
+    }
+}
+
+.content{
+    background-color: $primary;
+    padding: 15px;
+    width:250px;
+    flex-shrink: 0;
+    .links{
+        margin: 10px 0 0 6px;
+        border-left: 2px solid $tertiary;
+        .link{
+            @include flexprop(null, null, center, null);
+            padding: 5px;
+            background-color: $tertiary;
+            margin: 0 0 10px 10px;
+            border-radius: 3px;
+            position: relative;
+            cursor: pointer;  
+            &::after{
+                content: '';
+                position: absolute;
+                width: 20px;
+                border-bottom: 2px solid $tertiary;
+                top: 15px;
+                left: -10px;
+            }
+            &:hover{
+                background-color: #606060;
+                &::after{
+                border-bottom: 2px solid #606060;
+                }
+            }
+            .icons{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.main{
+    width: 100%;
+    .title{
+        height: 65px;
+        padding: 15px;
+        border-bottom: 2px solid $primary;
+    }
+    .contentData{
+        height: calc(100vh - 65px - 15px);
+        overflow: auto;
+        scroll-behavior: smooth;
+        padding: 0 15px 15px 15px;
+        margin-top: 15px;
+        &::-webkit-scrollbar {
+            display: none
+        }
+        #about,#culture,#recipe,#dance,#music,#dress,#lang{
+            padding: 8px;
+            margin-bottom: 15px;
+            background-color: $primary;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.icons {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #202020;
+  color: #fff;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  background-color: #303030;
+  padding: 15px;
+  width: 250px;
+  flex-shrink: 0;
+}
+.content .links {
+  margin: 10px 0 0 6px;
+  border-left: 2px solid #505050;
+}
+.content .links .link {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #505050;
+  margin: 0 0 10px 10px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+.content .links .link::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  border-bottom: 2px solid #505050;
+  top: 15px;
+  left: -10px;
+}
+.content .links .link:hover {
+  background-color: #606060;
+}
+.content .links .link:hover::after {
+  border-bottom: 2px solid #606060;
+}
+.content .links .link .icons {
+  font-size: 20px;
+}
+
+.main {
+  width: 100%;
+}
+.main .title {
+  height: 65px;
+  padding: 15px;
+  border-bottom: 2px solid #303030;
+}
+.main .contentData {
+  height: calc(100vh - 65px - 15px);
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding: 0 15px 15px 15px;
+  margin-top: 15px;
+}
+.main .contentData::-webkit-scrollbar {
+  display: none;
+}
+.main .contentData #about, .main .contentData #culture, .main .contentData #recipe, .main .contentData #dance, .main .contentData #music, .main .contentData #dress, .main .contentData #lang {
+  padding: 8px;
+  margin-bottom: 15px;
+  background-color: #303030;
+  border-radius: 5px;
+}/*# sourceMappingURL=stylecomp.css.map */

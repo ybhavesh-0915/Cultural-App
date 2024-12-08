@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultural App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header>
+        <button type="button" id="menuBtn" onclick="toggleFunction(document.getElementsByClassName('menubarContainer')[0])"><i class="ri-menu-line icons"></i></button>
+        <div class="searchContainer">
+            <input type="text" name="search" id="searchBar" placeholder="Search State" />
+            <label for="searchBar"><i class="ri-search-line icons"></i></label>
+        </div>
+    </header>
+    <main>
+        <!-- sidebar -->
+        <div class="menubarContainer" display="false">
+            <div class="menubar">
+                <button type="button" id="closeBtn" onclick="toggleFunction(document.getElementsByClassName('menubarContainer')[0])"><i class="ri-close-large-line icons"></i></button>
+                <div class="user">
+                    <img src="./Images/user.png" alt="user"/>
+                    <div class="userinfo">
+                        <div class="username">guest1234</div>
+                        <div class="useraccount">guest@gmail.com</div>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link"><i class="ri-home-2-fill icons"></i>Home</div>
+                    <div class="link"><i class="ri-compass-fill icons"></i>Explore</div>
+                    <div class="link"><i class="ri-calendar-event-fill icons"></i>Calender</div>
+                    <div class="link"><i class="ri-plane-fill icons"></i>Trips & Plans</div>
+                    <div class="link"><i class="ri-information-2-fill icons"></i>About Us</div>
+                    <div class="link"><i class="ri-phone-fill icons"></i>Contact Us</div>
+                </div>
+            </div>
+        </div>
+        <!-- maps -->
+        <div class="mapConatiner">
+            <img src="./Images/india.jpg" alt="India Maps" useMap='#indiaMap'>
+            <div id="tooltip" class="tooltip">
+                <div id="stateData"></div>
+                <div id="capitalData"></div>
+            </div>
+            <map name="indiaMap">
+                <area shape="poly" coords="275,83,372,81,372,81,422,84,438,145,328,126,326,126,291,153,291,153,275,126"
+                    alt="Jammu & Kashmir, Srinagar" href="./Components/kashmir.html">
+                <area shape="poly"
+                    coords="240,756,246,817,246,817,270,819,270,819,318,774,374,734,398,689,398,689,439,662,439,662,431,605,380,609,346,633,318,620,318,620,285,617,271,610,271,610,259,639,259,639,249,650,249,650,246,672,246,672,221,676,221,676,224,721"
+                    alt="Maharashtra, Mumbai" href="./maharashtra.html">
+                <area shape="poly"
+                    coords="159,478,204,478,114,401,114,401,134,377,134,377,182,365,219,329,244,301,277,277,283,309,314,313,318,346,346,361,376,365,390,398,395,409,346,438,354,464,295,463,282,492,267,490,267,490,249,488"
+                    alt="Rajashthan, Jaipur" href="./rajashthan.html">
+                <area shape="poly"
+                    coords="401,363,451,326,520,335,576,380,629,402,629,402,611,477,515,461,504,459,443,446,443,446,463,411,463,411,408,384,408,384,404,371"
+                    alt="UttarPradesh, Lucknow" href="./up.html">
+            </map>
+        </div>
+        <!-- scroll tabs -->
+        <div class="scrolltab">
+            <div class="scroll">
+                <div class="tab"><img src="./Images/img1.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img2.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img3.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img4.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img5.jpg" alt="tab image" class="tabImg"></div>
+                <!-- tab copy -->
+                <div class="tab"><img src="./Images/img1.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img2.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img3.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img4.jpg" alt="tab image" class="tabImg"></div>
+                <div class="tab"><img src="./Images/img5.jpg" alt="tab image" class="tabImg"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laboriosam dolorum repellendus possimus qui nobis quaerat tenetur odit recusandae nesciunt.</p>
+        </div>
+        <div class="links">
+            <h2>Quicks Links</h2>
+            <ul>
+                <li>Homes</li>
+                <li>Services</li>
+                <li>APIs</li>
+            </ul>
+        </div>
+        <div class="social">
+            <h2>Social Plugins</h2>
+            <ul>
+                <li>Instagram</li>
+                <li>Youtube</li>
+                <li>Twitter</li>
+            </ul>
+        </div>
+        <p class="copyright">2024 Justin Roy. All Rights Reserved.</p>
+    </footer>
+    <script src="./Functions/script.js"></script>
+</body>
+
+</html>

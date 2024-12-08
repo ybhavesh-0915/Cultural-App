@@ -1,0 +1,42 @@
+@media (max-width:660px) {
+    body {
+        background-image: url(background1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-form {
+        width: 300px;
+    }
+
+    .usergreet {
+        display: none;
+    }
+
+    .forms .chng-form {
+        margin-top: 25px;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid #ced3d9;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+}
+
+@media (max-width:300px) {
+    .main-form {
+        margin: 0;
+        width: 100%;
+    }
+
+    .forms {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .login-apple-btn,
+    .signup-apple-btn {
+        margin-bottom: 8px;
+    }
+}
